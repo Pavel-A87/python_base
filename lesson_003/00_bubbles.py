@@ -28,7 +28,7 @@ def bubble(point, step):
         radius += step
         sd.circle(center_position=point, radius=radius, width=2)
 point = sd.get_point(300, 300)
-buble(point=point, step=10)
+bubble(point=point, step=10)
 sd.pause()
 
 # Нарисовать 10 пузырьков в ряд
