@@ -4,6 +4,8 @@
 
 # Нарисовать пузырек - три вложенных окружностей с шагом 5 пикселей
 # DO здесь ваш код
+import random
+
 import simple_draw as sd
 
 sd.resolution = (1200, 600)
@@ -71,6 +73,7 @@ sd.pause()
 # Нарисовать 100 пузырьков в произвольных местах экрана случайными цветами
 # DO здесь ваш код
 
+import random
 import simple_draw as sd
 
 sd.resolution = (1200, 600)
@@ -83,7 +86,8 @@ def bubble(point, step):
 
 for _ in range(100):
     point = sd.random_point()
-    bubble(point=point, step=5)
+    step = random.randint(2, 7)
+    bubble(point=point, step=step)
 sd.pause()
 
 
