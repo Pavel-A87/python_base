@@ -10,18 +10,17 @@
 # from typing import Tuple
 # DO здесь ваш код
 
-month_31_day = (1, 3, 5, 8, 7, 10, 12)
-month_30_day = (4, 6, 9, 11)
-month_28_day = (2,)
-while 1 > 0:
-    user_input = input("Введите, пожалуйста, номер месяца: ")
-    month = int(user_input)
-    print('Вы ввели', month)
-    if month in month_31_day:
-        print("31")
-    elif month in month_30_day:
-        print("30")
-    elif month in month_28_day:
-        print("28")
-    elif month >= 13 or month <= 0:
-        print("Неправильный месяц, должен быть положительным числом от 1 до 12")
+month_count = (31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31)
+while True:
+    try:
+        user_input  = input("Введите, пожалуйста, номер месяца: ")
+        month  = int(user_input)
+        print('Вы ввели', month)
+    except ValueError:
+        print("Error! Это не целое число или вовсе строка!")
+    else:
+        if month >= 1 and month <=12:
+            print(month_count[month - 1])
+        else:
+            print("Неправильный месяц, должен быть положительным числом от 1 до 12")
+
