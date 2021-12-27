@@ -21,4 +21,4 @@ while True:
         if type(x) == int:
             print(x)
         else:
-            print("bbb")
+            print("Кэп, фсё прапалО!!!!")
