@@ -11,14 +11,20 @@
 a, b = 179, 37
 
 # DO здесь ваш код
+import math
+
 while True:
     a = int(input("Inter value A:"))
     b = int(input("Inter value B:"))
+
+    float_value = a / b
+    print(float_value)
+    int_value = math.trunc(float_value)
+    print(int_value)
+
     if a < b:
         print("Wrong values! 'A' must be a bigger then 'B'")
-    elif a > b:
-        x = a / b
-        if type(x) == int:
-            print(x)
-        else:
-            print("Кэп, фсё прапалО!!!!Мы не знаем куда деть лишние цифирики")
+    elif float_value > int_value:
+        print("Кэп, фсё прапалО!!!!Мы не знаем куда деть лишние цифирики")
+    else:
+        print("Целочисленное деление ", a, "на ", b, "дает ", int_value)
